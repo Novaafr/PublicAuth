@@ -13,12 +13,6 @@ namespace PublicAuth
 {
     public class Plugin : MelonMod
     {
-        //public override void OnApplicationStart()
-        //{
-        //    base.OnApplicationStart();
-         //   URLS.SetUp();
-        //}
-
         public override void OnInitializeMelon()
         {
             base.OnInitializeMelon();

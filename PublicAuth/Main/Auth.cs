@@ -49,9 +49,8 @@ namespace PublicAuth.Main
         static void OnAuthed(LoginResult result)
         {
             PhotonNetwork.ConnectToRegion("usw");
-            PhotonNetwork.ConnectUsingSettings();
             PlayFabAuthenticator.instance.AuthenticateWithPlayFab();
-            PlayFabAuthenticator.instance.RequestPhotonToken(result.PlayFabId, result.SessionTicket);
+            // PlayFabAuthenticator.instance.RequestPhotonToken(result.PlayFabId, result.SessionTicket);
             MelonLoader.MelonLogger.Msg($"Authed to playfab {PlayFabSettings.staticPlayer.IsClientLoggedIn()} | Photon Authed {PhotonNetwork.IsConnected}");
             if (result == null)
             {
